@@ -114,6 +114,36 @@ const Navbar = () => {
             )}
           </div>
 
+           <div>
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="w-full text-left hover:bg-gray-800 px-2 py-1"
+            >
+              Areas
+            </button>
+            {dropdownOpen && (
+              <div className="ml-4">
+                <a href="/airport-transfer" className="block hover:bg-gray-700 px-2 py-1">Airport Transfer</a>
+                <a href="/city-rides" className="block hover:bg-gray-700 px-2 py-1">City Rides</a>
+              </div>
+            )}
+          </div>
+
+           <div>
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="w-full text-left hover:bg-gray-800 px-2 py-1"
+            >
+              Stations
+            </button>
+            {dropdownOpen && (
+              <div className="ml-4">
+                <a href="/airport-transfer" className="block hover:bg-gray-700 px-2 py-1">Airport Transfer</a>
+                <a href="/city-rides" className="block hover:bg-gray-700 px-2 py-1">City Rides</a>
+              </div>
+            )}
+          </div>
+
           <a href="/contact" className="block hover:bg-gray-800 px-2 py-1">Contact</a>
         </div>
       )}
