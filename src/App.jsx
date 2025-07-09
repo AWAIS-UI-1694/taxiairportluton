@@ -11,6 +11,7 @@ import WestLondon from './pages/areaPages/westLondon'
 import NorthLondon from './pages/areaPages/northLondon'
 import CentralLondon from './pages/areaPages/centralLondon'
 import SouthLondon from './pages/areaPages/southLondon'
+import BookingForm from './components/bookingForm/bookingForm'
 
 function App() {
 
@@ -23,6 +24,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path='/contact' element={<Contact />} />
           
+          {/* Booking Form */}
+          <Route path='/bookingForm' element={<BookingForm />} />
+          
+          {/* Area Pages */}
 
           {/* Airport Pages */}
           <Route path='/london' element={<London />} />

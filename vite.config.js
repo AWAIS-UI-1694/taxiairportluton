@@ -8,4 +8,18 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  server: {
+       proxy: {
+         '/api': {
+           target: 'https://booking.londontaxi247.co.uk',
+           changeOrigin: true,
+           rewrite: (path) => path.replace(/^\/api/, ''),
+         },
+         '/api2': {
+           target: 'https://stationcarslondon.com',
+           changeOrigin: true,
+           rewrite: (path) => path.replace(/^\/api2/, ''),
+         },
+       },
+      }
 })

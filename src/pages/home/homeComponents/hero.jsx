@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import heroimg from "../../../assets/images/hero.png";
 import React from "react";
 
@@ -14,12 +15,12 @@ const Hero = () => {
                     <p className="text-lg mb-6">
                       Reliable, affordable, and fast airport transfers across London.
                     </p>
-                    <a
-                      href="/book"
+                    <Link
+                      to="/bookingForm"
                       className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-full transition"
                     >
                       Book Now
-                    </a>
+                    </Link>
                   </div>
         
                   {/* Right: Hero Image with Circle Behind */}
