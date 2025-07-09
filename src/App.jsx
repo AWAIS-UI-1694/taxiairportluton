@@ -29,7 +29,7 @@ function App() {
           <Route path='/eastLondon' element={<EastLondon />} />
           <Route path='/westLondon' element={<WestLondon />} />
           <Route path='/northLondon' element={<NorthLondon />} />
-          <Route path='/southlLondon' element={<SouthLondon />} />
+          <Route path='/southLondon' element={<SouthLondon />} />
           <Route path='/centralLondon' element={<CentralLondon />} />
         </Routes>
       </main>
