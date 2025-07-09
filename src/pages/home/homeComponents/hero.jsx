@@ -23,7 +23,7 @@ const Hero = () => {
                   </div>
         
                   {/* Right: Hero Image with Circle Behind */}
-                  <div className="relative flex justify-center items-right">
+                  <div className=" flex justify-center items-right">
                     {/* Background Circle */}
                     {/* <div className="absolute bg-yellow-100 rounded-full  w-full md:h-72 my-auto z-0"></div> */}
         
