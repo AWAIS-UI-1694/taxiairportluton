@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 import React, { useState } from 'react';
@@ -144,7 +145,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <a href="/contact" className="block hover:bg-gray-800 px-2 py-1">Contact</a>
+          <Link to="/contact.jsx" className="block hover:bg-gray-800 px-2 py-1">Contact</Link>
         </div>
       )}
     </nav>

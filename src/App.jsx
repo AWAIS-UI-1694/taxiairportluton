@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Home from './pages/home'
+
 import Navbar from './components/navbar'
+import Home from './pages/home/home'
+import Contact from './pages/contactPage/contact'
 
 function App() {
 
@@ -9,9 +11,10 @@ function App() {
     <>
       <Router>
       <Navbar />
-      <main className="p-4">
+      <main className="">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
           
         </Routes>
       </main>
