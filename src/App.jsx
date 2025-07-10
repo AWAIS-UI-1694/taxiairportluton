@@ -14,7 +14,6 @@ import NorthLondon from "./pages/areaPages/northLondon";
 import CentralLondon from "./pages/areaPages/centralLondon";
 import SouthLondon from "./pages/areaPages/southLondon";
 import BookingForm from "./components/bookingForm/bookingForm";
-
 // Airports Pages Link
 import LondonAirport from "./pages/airportPages/londonAirport";
 import GatwickAirport from "./pages/airportPages/gatwickAirport";
