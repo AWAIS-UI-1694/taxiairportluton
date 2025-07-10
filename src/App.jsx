@@ -22,7 +22,7 @@ import HeathrowAirport from "./pages/airportPages/heathrowAirport";
 // About and Contact Pages
 import Contact from "./pages/contactPage/contact";
 import About from "./pages/aboutPage/about";
-import BookingForm from "./components/Form/bookingForm";
+import BookingForm from "./components/wdfs/bookingForm";
 
 function App() {
   return (
