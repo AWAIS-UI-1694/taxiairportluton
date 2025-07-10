@@ -55,9 +55,11 @@ const Navbar = () => {
                 </svg>
               </button>
               {dropdowns.airports && (
-                <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48  z-[9999]">
-                  <Link to="/airport-transfer" className="block px-4 py-2 hover:bg-gray-100">Airport Transfer</Link>
-                  <Link to="/city-rides" className="block px-4 py-2 hover:bg-gray-100">City Rides</Link>
+                <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48 z-50">
+                  <Link to="/londonAirport" className="block px-4 py-2 hover:bg-gray-100">London Airport</Link>
+                  <Link to="/gatwickAirport" className="block px-4 py-2 hover:bg-gray-100">Gatwick Airport</Link>
+                  <Link to="/stanstedAirport" className="block px-4 py-2 hover:bg-gray-100">Stansted Airport</Link>
+                  <Link to="/heathrowAirport" className="block px-4 py-2 hover:bg-gray-100">Heathrow Airport</Link>
                 </div>
               )}
             </div>
@@ -74,7 +76,7 @@ const Navbar = () => {
                 </svg>
               </button>
               {dropdowns.areas && (
-                <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48 z-10">
+                <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48 z-50">
                   <Link to="/london" className="block px-4 py-2 hover:bg-gray-100">London Taxi</Link>
                   <Link to="/eastLondon" className="block px-4 py-2 hover:bg-gray-100">East London Taxi</Link>
                   <Link to="/westLondon" className="block px-4 py-2 hover:bg-gray-100">West London Taxi</Link>
@@ -97,7 +99,7 @@ const Navbar = () => {
                 </svg>
               </button>
               {dropdowns.stations && (
-                <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48 z-10">
+                <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48 z-50">
                   <Link to="/paddington" className="block px-4 py-2 hover:bg-gray-100">Paddington</Link>
                   <Link to="/euston" className="block px-4 py-2 hover:bg-gray-100">Euston</Link>
                 </div>
@@ -138,8 +140,10 @@ const Navbar = () => {
                 <div className="ml-4 space-y-1">
                   {type === 'airports' && (
                     <>
-                      <Link to="/airport-transfer" className="block hover:bg-gray-700 px-2 py-1">Airport Transfer</Link>
-                      <Link to="/city-rides" className="block hover:bg-gray-700 px-2 py-1">City Rides</Link>
+                  <Link to="/londonAirport" className="block px-4 py-2 hover:bg-gray-100">London Airport</Link>
+                  <Link to="/gatwickAirport" className="block px-4 py-2 hover:bg-gray-100">Gatwick Airport</Link>
+                  <Link to="/stanstedAirport" className="block px-4 py-2 hover:bg-gray-100">Stansted Airport</Link>
+                  <Link to="/heathrowAirport" className="block px-4 py-2 hover:bg-gray-100">Heathrow Airport</Link>
                     </>
                   )}
                   {type === 'areas' && (
