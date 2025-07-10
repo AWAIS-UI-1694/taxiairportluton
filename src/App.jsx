@@ -13,7 +13,6 @@ import WestLondon from "./pages/areaPages/westLondon";
 import NorthLondon from "./pages/areaPages/northLondon";
 import CentralLondon from "./pages/areaPages/centralLondon";
 import SouthLondon from "./pages/areaPages/southLondon";
-import BookingForm from "./components/Form/bookingForm";
 // Airports Pages Link
 import LondonAirport from "./pages/airportPages/londonAirport";
 import GatwickAirport from "./pages/airportPages/gatwickAirport";
@@ -23,6 +22,7 @@ import HeathrowAirport from "./pages/airportPages/heathrowAirport";
 // About and Contact Pages
 import Contact from "./pages/contactPage/contact";
 import About from "./pages/aboutPage/about";
+import BookingForm from "./components/Form/bookingForm";
 
 function App() {
   return (
