@@ -19,14 +19,13 @@ const Home = () => {
   return (
     <div className="">
       {/* Hero Section */}
-    <Hero />
-     
+      <Hero />
 
       {/* About / Content Section */}
       <HomeContent />
 
       {/* Airports Section */}
-     <Airport />
+      <Airport />
       {/* Train Stations */}
       <StationsSection />
 
