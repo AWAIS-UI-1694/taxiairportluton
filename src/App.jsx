@@ -48,7 +48,7 @@ function App() {
             <Route path="/londonAirport" element={<LondonAirport />} />
             <Route path="/gatwickAirport" element={<GatwickAirport />} />
             <Route path="/stanstedAirport" element={<StanstedAirport />} />
-            <Route path="/heatthrowAirport" element={<HeathrowAirport />} />
+            <Route path="/heathrowAirport" element={<HeathrowAirport />} />
 
             {/* Contact Page */}
             <Route path="/contact" element={<Contact />} />
