@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 import "./App.css";
 
 // Components
@@ -6,27 +7,31 @@ import Navbar from "./components/navbar";
 import Home from "./pages/home/home";
 import Footer from "./components/footer";
 
-// Area Pages Link
+// Area Pages
 import London from "./pages/areaPages/london";
 import EastLondon from "./pages/areaPages/eastLondon";
 import WestLondon from "./pages/areaPages/westLondon";
 import NorthLondon from "./pages/areaPages/northLondon";
 import CentralLondon from "./pages/areaPages/centralLondon";
 import SouthLondon from "./pages/areaPages/southLondon";
-// Airports Pages Link
+
+// Airport Pages
 import LondonAirport from "./pages/airportPages/londonAirport";
 import GatwickAirport from "./pages/airportPages/gatwickAirport";
 import StanstedAirport from "./pages/airportPages/stanstedAirport";
 import HeathrowAirport from "./pages/airportPages/heathrowAirport";
 
-// About and Contact Pages
+// Other Pages
 import Contact from "./pages/contactPage/contact";
 import About from "./pages/aboutPage/about";
 import BookingForm from "./components/bookme/bookingForm";
 
+// Utils
+import GoToTopButton from "./utils/goToTop.jsx";
+
 function App() {
   return (
-    <>
+    <HelmetProvider>
       <Router>
         <Navbar />
         <main>
@@ -36,7 +41,7 @@ function App() {
             {/* Booking Form */}
             <Route path="/bookingForm" element={<BookingForm />} />
 
-            {/* Areas Pages */}
+            {/* Area Pages */}
             <Route path="/london" element={<London />} />
             <Route path="/eastLondon" element={<EastLondon />} />
             <Route path="/westLondon" element={<WestLondon />} />
@@ -44,20 +49,21 @@ function App() {
             <Route path="/southLondon" element={<SouthLondon />} />
             <Route path="/centralLondon" element={<CentralLondon />} />
 
-            {/* Airports Pages */}
+            {/* Airport Pages */}
             <Route path="/londonAirport" element={<LondonAirport />} />
             <Route path="/gatwickAirport" element={<GatwickAirport />} />
             <Route path="/stanstedAirport" element={<StanstedAirport />} />
             <Route path="/heathrowAirport" element={<HeathrowAirport />} />
 
-            {/* Contact Page */}
+            {/* Other Pages */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>
+        <GoToTopButton />
         <Footer />
       </Router>
-    </>
+    </HelmetProvider>
   );
 }
 

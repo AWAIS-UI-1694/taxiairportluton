@@ -4,10 +4,10 @@ import airportdemo from "../../../assets/images/airportdemo.jpg";
 
 const Airport = () => {
      const airports = [
-        { name: "Luton", path: "/airports/luton", image: airportdemo },
-        { name: "Heathrow", path: "/airports/heathrow", image: "heathrow.jpg" },
-        { name: "Gatwick", path: "/airports/gatwick", image: "gatwick.jpg" },
-        { name: "Stansted", path: "/airports/stansted", image: "stansted.jpg" },
+        { name: "London", path: "/londonAirport", image: airportdemo },
+        { name: "Heathrow", path: "/heathrowAirport", image: "heathrow.jpg" },
+        { name: "Gatwick", path: "/gatwickAirport", image: "gatwick.jpg" },
+        { name: "Stansted", path: "/stanstedAirport", image: "stansted.jpg" },
       ];
     return (
         <>
