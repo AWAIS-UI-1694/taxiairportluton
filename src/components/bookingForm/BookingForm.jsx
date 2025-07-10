@@ -30,6 +30,7 @@ const BookingForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isPickupAirportModalOpen, setIsPickupAirportModalOpen] = useState(false);
   const [isDropoffAirportModalOpen, setIsDropoffAirportModalOpen] = useState(false);
+  
 
   const maxFields = 7;
 

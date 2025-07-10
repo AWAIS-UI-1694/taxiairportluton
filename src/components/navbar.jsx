@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import React, { useState } from 'react';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -9,6 +9,14 @@ const Navbar = () => {
     areas: false,
     stations: false,
   });
+
+  const location = useLocation();
+
+  // Close dropdowns and mobile menu on route change
+  useEffect(() => {
+    setDropdowns({ airports: false, areas: false, stations: false });
+    setMobileMenuOpen(false);
+  }, [location]);
 
   const toggleDropdown = (type) => {
     setDropdowns((prev) => ({
@@ -47,7 +55,7 @@ const Navbar = () => {
                 </svg>
               </button>
               {dropdowns.airports && (
-                <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48 z-10">
+                <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48  z-[9999]">
                   <Link to="/airport-transfer" className="block px-4 py-2 hover:bg-gray-100">Airport Transfer</Link>
                   <Link to="/city-rides" className="block px-4 py-2 hover:bg-gray-100">City Rides</Link>
                 </div>

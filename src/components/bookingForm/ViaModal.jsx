@@ -3,11 +3,12 @@ import axios from 'axios';
 import { AsyncPaginate } from 'react-select-async-paginate';
 import { FaTimes } from 'react-icons/fa';
 
-const ViaModal = ({ isOpen, onClose, viaFields, setViaFields, validAddresses, maxFields }) => {
+const ViaModal = ({ isOpen, onClose, viaFields, setViaFields, validAddresses, setValidAddresses, maxFields }) => {
   const [tempFields, setTempFields] = useState([...viaFields]);
   const [errors, setErrors] = useState({});
+  const [localAddresses, setLocalAddresses] = useState([]); // Local storage for fetched addresses
 
-  const loadOptions = async (search, loadedOptions) => {
+    const loadOptions = async (search, loadedOptions) => {
     try {
       const response = await axios.get('https://booking.taxisnetwork.com/Home/Indextwo', {
         params: { Prefix: search },
@@ -42,11 +43,26 @@ const ViaModal = ({ isOpen, onClose, viaFields, setViaFields, validAddresses, ma
   };
 
   const handleFieldChange = (index, value) => {
+    console.log('Selected value:', value);
+    const selectedValue = value ? value.value : '';
     setTempFields((prev) => {
       const newFields = [...prev];
-      newFields[index] = value ? value.value : '';
+      newFields[index] = selectedValue;
       return newFields;
     });
+    // Add selected value to localAddresses and validAddresses
+    if (selectedValue) {
+      setLocalAddresses((prev) => {
+        const newAddresses = [...new Set([...prev, selectedValue])];
+        console.log('Added selected value to localAddresses:', newAddresses);
+        return newAddresses;
+      });
+      setValidAddresses((prev) => {
+        const newAddresses = [...new Set([...prev, selectedValue])];
+        console.log('Added selected value to validAddresses:', newAddresses);
+        return newAddresses;
+      });
+    }
     setErrors((prev) => {
       const newErrors = { ...prev };
       delete newErrors[index];
@@ -55,6 +71,9 @@ const ViaModal = ({ isOpen, onClose, viaFields, setViaFields, validAddresses, ma
   };
 
   const handleSave = () => {
+    console.log('Saving tempFields:', tempFields);
+    console.log('Current localAddresses:', localAddresses);
+    console.log('Current validAddresses:', validAddresses);
     const newErrors = {};
     let isValid = true;
 
@@ -62,9 +81,12 @@ const ViaModal = ({ isOpen, onClose, viaFields, setViaFields, validAddresses, ma
       if (!field) {
         newErrors[index] = 'This field cannot be empty.';
         isValid = false;
-      } else if (!validAddresses.includes(field)) {
-        newErrors[index] = 'Invalid value. Please select from the list.';
+      } else if (!localAddresses.includes(field) && !validAddresses.includes(field)) {
+        console.log(`Validation failed for field "${field}" at index ${index}`);
+        newErrors[index] = `Invalid value: "${field}". Please select from the list.`;
         isValid = false;
+      } else {
+        console.log(`Validation passed for field "${field}" at index ${index}`);
       }
     });
 
@@ -105,6 +127,8 @@ const ViaModal = ({ isOpen, onClose, viaFields, setViaFields, validAddresses, ma
                 placeholder="Enter a Location"
                 className="mb-2"
                 classNamePrefix="Select"
+                debounceTimeout={500}
+                additional={{ page: 1 }}
               />
               {errors[index] && <p className="text-red-500 text-sm">{errors[index]}</p>}
               <button

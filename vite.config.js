@@ -9,17 +9,22 @@ export default defineConfig({
     tailwindcss()
   ],
   server: {
-       proxy: {
-         '/api': {
-           target: 'https://booking.londontaxi247.co.uk',
-           changeOrigin: true,
-           rewrite: (path) => path.replace(/^\/api/, ''),
-         },
-         '/api2': {
-           target: 'https://stationcarslondon.com',
-           changeOrigin: true,
-           rewrite: (path) => path.replace(/^\/api2/, ''),
-         },
-       },
-      }
+    proxy: {
+      '/api': {
+        target: 'https://stationcarslondon.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+      '/api2': {
+        target: 'https://booking.londontaxi247.co.uk',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api2/, ''),
+      },
+      '/api3': {
+        target: 'https://booking.taxisnetwork.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api3/, ''),
+        secure: false, // Allow non-HTTPS connections if needed
+      },
+    },}
 })
