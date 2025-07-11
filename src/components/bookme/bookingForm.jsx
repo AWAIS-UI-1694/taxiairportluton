@@ -213,8 +213,12 @@ const BookingForm = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="container mx-auto md:h-svh py-12 w-full justify-center content-center p-4">
+      <h1 className="text-5xl font-bold text-center mb-10">
+        Book Your Taxi
+      </h1>
+     <div className="my-auto">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="flex flex-col gap-4">
           {/* pickup */}
           <div>
@@ -227,13 +231,13 @@ const BookingForm = () => {
                 onChange={setPickup}
                 loadOptions={loadOptions}
                 placeholder="Select pickup address"
-                className="flex-1"
+                className="flex-1 active"
                 minLength={3}
                 classNamePrefix="Select"
               />
               <button
                 onClick={() => setIsPickupAirportModalOpen(true)}
-                className="ml-2 p-2 bg-gray-200 rounded"
+                className="ml-2 p-2 bg-yellow-500 rounded"
               >
                 <FaPlane />
               </button>
@@ -267,7 +271,7 @@ const BookingForm = () => {
             />
             <button
               onClick={() => setIsViaModalOpen(true)}
-              className="ml-2 p-2 bg-gray-200 rounded"
+              className="ml-2 p-2 bg-yellow-500 rounded"
             >
               <FaPlus />
             </button>
@@ -291,7 +295,7 @@ const BookingForm = () => {
               />
               <button
                 onClick={() => setIsDropoffAirportModalOpen(true)}
-                className="ml-2 p-2 bg-gray-200 rounded"
+                className="ml-2 p-2 bg-yellow-500 rounded"
               >
                 <FaPlane />
               </button>
@@ -354,7 +358,7 @@ const BookingForm = () => {
                   </option>
                 ))}
               </select>
-              <button className="ml-2 p-2 bg-gray-200 rounded">
+              <button className="ml-2 p-2 bg-yellow-500 rounded">
                 <FaUsers />
               </button>
             </div>
@@ -373,7 +377,7 @@ const BookingForm = () => {
               />
               <button
                 onClick={() => setIsLuggageModalOpen(true)}
-                className="ml-2 p-2 bg-gray-200 rounded"
+                className="ml-2 p-2 bg-yellow-500 rounded"
               >
                 <FaLuggageCart />
               </button>
@@ -399,7 +403,7 @@ const BookingForm = () => {
         {luggage.map((item) => (
           <div
             key={item.name}
-            className="flex items-center bg-gray-200 p-2 rounded"
+            className="flex items-center bg-yellow-500 p-2 rounded"
           >
             <span>
               {item.quantity} {item.name}
@@ -417,14 +421,14 @@ const BookingForm = () => {
       <div className="mt-4 text-center">
         <button
           onClick={handleGetQuotes}
-          className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
+          className="bg-yellow-500 text-black px-6 py-3 rounded-3xl cursor-pointer hover:bg-black hover:text-white transition-colors duration-300"
         >
           Get Quotes
         </button>
       </div>
       {isLoading && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-yellow-500"></div>
         </div>
       )}
 
@@ -465,6 +469,7 @@ const BookingForm = () => {
         onClose={() => setIsItemCountModalOpen(false)}
         onSave={handleSaveItemCount}
       />
+     </div>
     </div>
   );
 };
