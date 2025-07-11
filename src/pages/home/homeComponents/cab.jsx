@@ -48,12 +48,12 @@ const Cab = () => {
           <h2 className="text-3xl font-semibold mb-16">Cab Types</h2>
 
           {/* Tab Bar */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center md:gap-4 gap-2 mb-8">
             {cabTypes.map((cab) => (
               <button
                 key={cab.name}
                 onClick={() => setActive(cab.name)}
-                className={`px-4 py-2 rounded-lg border-0 after:border-0  transition ${active === cab.name
+                className={`px-2 md:px-4 py-2 text-sm md:text-lg rounded-lg border-0 after:border-0  transition ${active === cab.name
                     ? 'bg-yellow-500 text-black font-semibold'
                     : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'
                   }`}
@@ -64,7 +64,7 @@ const Cab = () => {
           </div>
 
           {/* Cab Details */}
-          <div className="flex flex-col md:flex-row min-h-72 items-center justify-center gap-8">
+          <div className="flex flex-col md:flex-row h-86 md:min-h-72 items-center justify-center gap-8">
             <img
               src={selected.image}
               alt={selected.name}

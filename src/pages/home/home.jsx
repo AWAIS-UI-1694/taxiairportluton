@@ -38,10 +38,10 @@ const Home = () => {
           Book, track, and manage your rides on the go.
         </p>
         <div className="flex justify-center gap-4">
-          <a href="#" className="bg-black text-white px-6 py-2 rounded-lg">
+          <a href="https://apps.apple.com/us/app/taxisnetwork/id1527242637" className="bg-black text-white px-6 py-2 rounded-lg">
             App Store
           </a>
-          <a href="#" className="bg-black text-white px-6 py-2 rounded-lg">
+          <a href="https://play.google.com/store/apps/details?id=taxisnetwork.com.uk&pli=1" className="bg-black text-white px-6 py-2 rounded-lg">
             Google Play
           </a>
         </div>
