@@ -21,15 +21,7 @@ import GatwickAirport from "./pages/airportPages/gatwickAirport";
 import StanstedAirport from "./pages/airportPages/stanstedAirport";
 import HeathrowAirport from "./pages/airportPages/heathrowAirport";
 
-// Other Pages
-import Contact from "./pages/contactPage/contact";
-import About from "./pages/aboutPage/about";
-import BookingForm from "./components/bookme/bookingForm";
-
-// Utils
-import GoToTopButton from "./utils/goToTop.jsx";
-import PetTransport from "./pages/services/petTransport.jsx";
-import HotelTransport from "./pages/services/hotelTransport.jsx";
+// Stations Pages
 import CharingCrossStation from "./pages/stationPages/charingCrossStation.jsx";
 import LondonBridgeStation from "./pages/stationPages/londonBridgeStation.jsx";
 import WaterlooStation from "./pages/stationPages/waterlooStation.jsx";
@@ -37,6 +29,22 @@ import VictoriaStation from "./pages/stationPages/victoriaStation.jsx";
 import PaddingtonStation from "./pages/stationPages/paddingtonStation.jsx";
 import KingsCrossStation from "./pages/stationPages/kingsCrossStation.jsx";
 import EustonStation from "./pages/stationPages/eustonStation.jsx";
+
+// Services Pages
+import PetServices from "./pages/services/petServices.jsx";
+import HotelServices from "./pages/services/hotelServices.jsx";
+
+// Other Pages
+import Contact from "./pages/contactPage/contact";
+import About from "./pages/aboutPage/about";
+
+// Booking Form
+import BookingForm from "./components/bookme/bookingForm";
+
+
+// Utils
+import GoToTopButton from "./utils/goToTop.jsx";
+
 
 function App() {
   return (
@@ -74,8 +82,8 @@ function App() {
             <Route path="/eustonStation" element={<EustonStation />} />
 
             {/* Services */}
-            <Route path="/petTransport" element={<PetTransport />} />
-            <Route path="/hotelTransport" element={<HotelTransport />} />
+            <Route path="/petTransport" element={<PetServices />} />
+            <Route path="/hotelTransport" element={<HotelServices />} />
 
             {/* Other Pages */}
             <Route path="/contact" element={<Contact />} />

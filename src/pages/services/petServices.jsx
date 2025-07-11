@@ -1,4 +1,4 @@
-const PetTransport = () => {
+const PetServices = () => {
     return (
         <>
         <h1>hello</h1>
@@ -6,4 +6,4 @@ const PetTransport = () => {
     );
 }
 
-export default PetTransport;
+export default PetServices;

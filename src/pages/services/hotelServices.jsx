@@ -1,4 +1,4 @@
-const HotelTransport = () => {
+const HotelServices = () => {
     return (
         <>
         <h1>hello</h1>
@@ -6,4 +6,4 @@ const HotelTransport = () => {
     );
 }
 
-export default HotelTransport;
+export default HotelServices;

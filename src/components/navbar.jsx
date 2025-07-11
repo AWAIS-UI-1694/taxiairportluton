@@ -126,8 +126,8 @@ const Navbar = () => {
               </button>
               {dropdowns.services && (
                 <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48 z-50">
-                      <Link to="/paddingtonStation" className="block hover:bg-gray-100 px-2 py-1">Paddington</Link>
-                      <Link to="/eustonStation" className="block hover:bg-gray-100 px-2 py-1">Euston</Link>                
+                      <Link to="/petServices" className="block hover:bg-gray-100 px-2 py-1">Luton Pet Service</Link>
+                      <Link to="/hotelServices" className="block hover:bg-gray-100 px-2 py-1">Luton Hotel Transfer</Link>                
                 </div>
               )}
             </div>
@@ -195,8 +195,8 @@ const Navbar = () => {
                   )}
                   {type === 'services' && (
                     <>
-                      <Link to="/paddingtonStation" className="block hover:bg-gray-100 px-2 py-1">Paddington</Link>
-                      <Link to="/eustonStation" className="block hover:bg-gray-100 px-2 py-1">Euston</Link>
+                      <Link to="/petServices" className="block hover:bg-gray-100 px-2 py-1">Luton Pet Service</Link>
+                      <Link to="/hotelServices" className="block hover:bg-gray-100 px-2 py-1">Luton Hotel Transfer</Link> 
                     </>
                   )}
                 </div>
