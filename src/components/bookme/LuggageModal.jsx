@@ -2,38 +2,70 @@ import React from 'react';
 import { FaTimes } from 'react-icons/fa';
 
 const LuggageModal = ({ isOpen, onClose, onSelect }) => {
-  // Expanded luggage items organized by category
   const items = [
     {
       category: 'Luggage',
       options: [
-        { name: 'Cabin Bag (Small)', type: 'cabin' },
-        { name: 'Check-in Bag (Medium)', type: 'checkin' },
-        { name: 'Large Suitcase', type: 'checkin' },
-        { name: 'Extra Large Suitcase', type: 'checkin' },
+        { name: 'Hand Luggage', type: 'cabin' },
+        { name: 'Suitcase', type: 'checkin' },
         { name: 'Backpack', type: 'cabin' },
-        { name: 'Handbag', type: 'cabin' },
       ],
     },
     {
-      category: 'Sports Equipment',
+      category: 'Boxes',
       options: [
-        { name: 'Golf Bag', type: 'checkin' },
-        { name: 'Ski Equipment', type: 'checkin' },
+        { name: 'Small Box (14x12x15 inches)', type: 'cabin' },
+        { name: 'Medium Box (16x16x16 inches)', type: 'checkin' },
+        { name: 'Large Box (20x20x20 inches)', type: 'checkin' },
+        { name: 'XL Box (24x24x33 inches)', type: 'checkin' },
+      ],
+    },
+    {
+      category: 'Outdoor Items',
+      options: [
+        { name: 'Tent', type: 'checkin' },
+        { name: 'Large Rucksack', type: 'checkin' },
+        { name: 'Ironing Board', type: 'checkin' },
+        { name: 'Pair of Skis', type: 'checkin' },
         { name: 'Snowboard', type: 'checkin' },
-        { name: 'Bicycle (Boxed)', type: 'checkin' },
+        { name: 'Bike', type: 'checkin' },
+        { name: 'Bike Box', type: 'checkin' },
+        { name: 'Golf Bag', type: 'checkin' },
       ],
     },
     {
-      category: 'Other Items',
+      category: 'Pets',
       options: [
-        { name: 'Extra Passenger', type: 'passenger' },
-        { name: 'Pet Carrier (Small)', type: 'cabin' },
-        { name: 'Pet Carrier (Large)', type: 'checkin' },
-        { name: 'Musical Instrument (Small)', type: 'cabin' },
-        { name: 'Musical Instrument (Large)', type: 'checkin' },
-        { name: 'Stroller/Pram', type: 'checkin' },
-        { name: 'Wheelchair', type: 'checkin' },
+        { name: 'Small Pet (in cage)', type: 'passenger' },
+        { name: 'Large Dog', type: 'passenger' },
+      ],
+    },
+    {
+      category: 'Household Items',
+      options: [
+        { name: 'TV (less than 30 inches)', type: 'checkin' },
+        { name: 'TV (30 to 60 inches)', type: 'checkin' },
+        { name: 'Music Speaker (Large)', type: 'checkin' },
+        { name: 'Mirror (up to 60x36 inches)', type: 'checkin' },
+        { name: 'Rug (up to 24x84 inches)', type: 'checkin' },
+        { name: 'Single Mattress', type: 'checkin' },
+        { name: 'Bedside Table (45x55cm)', type: 'checkin' },
+        { name: 'Microwave Oven', type: 'checkin' },
+        { name: 'Vacuum Cleaner', type: 'checkin' },
+        { name: 'TV Stand', type: 'checkin' },
+        { name: 'Musical Instrument (up to 60x24 inches)', type: 'checkin' },
+      ],
+    },
+    {
+      category: 'Child Items',
+      options: [
+        { name: 'Child Seat 1 Year', type: 'passenger' },
+        { name: 'Child Seat 2 Year', type: 'passenger' },
+        { name: 'Child Seat 3 Year', type: 'passenger' },
+        { name: 'Child Seat 4 Year', type: 'passenger' },
+        { name: 'Child Seat 5 Year', type: 'passenger' },
+        { name: "Child's Pram", type: 'checkin' },
+        { name: "Child's Foldable Pushchair", type: 'checkin' },
       ],
     },
   ];

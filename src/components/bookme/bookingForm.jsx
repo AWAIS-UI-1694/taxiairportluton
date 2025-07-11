@@ -1,13 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { format, addHours } from 'date-fns';
-import axios from 'axios';
-import { AsyncPaginate } from 'react-select-async-paginate';
-import { FaPlane, FaPlus, FaUsers, FaLuggageCart, FaTimes } from 'react-icons/fa';
-import ViaModal from './ViaModal';
-import AirportModal from './AirportModal';
-import LuggageModal from './LuggageModal';
-import WaitTimeModal from './WaitTimeModal';
-import ItemCountModal from './ItemCountModal';
+import React, { useState, useEffect } from "react";
+import { format, addHours } from "date-fns";
+import axios from "axios";
+import { AsyncPaginate } from "react-select-async-paginate";
+import {
+  FaPlane,
+  FaPlus,
+  FaUsers,
+  FaLuggageCart,
+  FaTimes,
+} from "react-icons/fa";
+import ViaModal from "./ViaModal";
+import AirportModal from "./AirportModal";
+import LuggageModal from "./LuggageModal";
+import WaitTimeModal from "./WaitTimeModal";
+import ItemCountModal from "./ItemCountModal";
 
 const BookingForm = () => {
   const [pickup, setPickup] = useState(null);
@@ -15,35 +21,36 @@ const BookingForm = () => {
   const [viaFields, setViaFields] = useState([]);
   const [isViaModalOpen, setIsViaModalOpen] = useState(false);
   const [validAddresses, setValidAddresses] = useState([]);
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
   const [passengers, setPassengers] = useState(1);
-  const [journeyType, setJourneyType] = useState('Single Trip');
+  const [journeyType, setJourneyType] = useState("Single Trip");
   const [waitingTime, setWaitingTime] = useState(0);
   const [luggage, setLuggage] = useState([]);
   const [isLuggageModalOpen, setIsLuggageModalOpen] = useState(false);
   const [isWaitModalOpen, setIsWaitModalOpen] = useState(false);
   const [isItemCountModalOpen, setIsItemCountModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [fromDoorNo, setFromDoorNo] = useState('');
-  const [toDoorNo, setToDoorNo] = useState('');
+  const [fromDoorNo, setFromDoorNo] = useState("");
+  const [toDoorNo, setToDoorNo] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isPickupAirportModalOpen, setIsPickupAirportModalOpen] = useState(false);
-  const [isDropoffAirportModalOpen, setIsDropoffAirportModalOpen] = useState(false);
-  
+  const [isPickupAirportModalOpen, setIsPickupAirportModalOpen] =
+    useState(false);
+  const [isDropoffAirportModalOpen, setIsDropoffAirportModalOpen] =
+    useState(false);
 
   const maxFields = 7;
 
   useEffect(() => {
     initializeDateTime();
     axios
-      .post('https://stationcarslondon.com/api/VisitWeb', {
-        weburl: 'https://www.taxiairportluton.co.uk/',
-        webname: 'Taxi Airport Luton',
-        officeCode: 'LTX',
-        officeNumber: '02037403527',
+      .post("https://stationcarslondon.com/api/VisitWeb", {
+        weburl: "https://www.taxiairportluton.co.uk/",
+        webname: "Taxi Airport Luton",
+        officeCode: "LTX",
+        officeNumber: "02037403527",
       })
-      .catch((error) => console.error('Error posting visit data:', error));
+      .catch((error) => console.error("Error posting visit data:", error));
   }, []);
 
   const initializeDateTime = () => {
@@ -66,37 +73,44 @@ const BookingForm = () => {
       }
     }
 
-    const formattedDate = format(today, 'yyyy-MM-dd');
-    const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+    const formattedDate = format(today, "yyyy-MM-dd");
+    const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes
+      .toString()
+      .padStart(2, "0")}`;
     setDate(formattedDate);
     setTime(formattedTime);
   };
 
   const loadOptions = async (search, loadedOptions) => {
     try {
-      const response = await axios.get('https://booking.londontaxi247.co.uk/Home/Indextwo', {
-        params: { Prefix: search },
-      });
+      const response = await axios.get(
+        "https://booking.londontaxi247.co.uk/Home/Indextwo",
+        {
+          params: { Prefix: search },
+        }
+      );
       const addresses = response.data.list.map((item) => ({
         value: item.address,
         label: item.address,
       }));
-      setValidAddresses((prev) => [...new Set([...prev, ...addresses.map((a) => a.value)])]);
+      setValidAddresses((prev) => [
+        ...new Set([...prev, ...addresses.map((a) => a.value)]),
+      ]);
       return {
         options: addresses,
         hasMore: false,
       };
     } catch (error) {
-      console.error('Error fetching addresses:', error);
+      console.error("Error fetching addresses:", error);
       return { options: [], hasMore: false };
     }
   };
 
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
-    const today = format(new Date(), 'yyyy-MM-dd');
+    const today = format(new Date(), "yyyy-MM-dd");
     if (selectedDate < today) {
-      alert('Do Not Select the Previous Date');
+      alert("Do Not Select the Previous Date");
       setDate(today);
     } else {
       setDate(selectedDate);
@@ -106,7 +120,7 @@ const BookingForm = () => {
   const handleJourneyTypeChange = (e) => {
     const value = e.target.value;
     setJourneyType(value);
-    if (value === 'WR') {
+    if (value === "WR") {
       setIsWaitModalOpen(true);
     } else {
       setWaitingTime(0);
@@ -120,12 +134,18 @@ const BookingForm = () => {
 
   const handleSaveItemCount = (quantity) => {
     if (selectedItem) {
-      const existingItem = luggage.find((item) => item.name === selectedItem.name);
+      const existingItem = luggage.find(
+        (item) => item.name === selectedItem.name
+      );
       if (existingItem) {
         setLuggage((prev) =>
           prev.map((item) =>
             item.name === selectedItem.name
-              ? { ...item, quantity, sendVal: `${quantity}@${selectedItem.name}` }
+              ? {
+                  ...item,
+                  quantity,
+                  sendVal: `${quantity}@${selectedItem.name}`,
+                }
               : item
           )
         );
@@ -151,28 +171,35 @@ const BookingForm = () => {
 
   const handleGetQuotes = () => {
     if (!pickup || !dropoff || !date || !time || !passengers) {
-      alert('ERROR!\nPlease select all fields correctly.');
+      alert("ERROR!\nPlease select all fields correctly.");
       return;
     }
 
     setIsLoading(true);
-    const [hours, minutes] = time.split(':');
+    const [hours, minutes] = time.split(":");
     const luggageObject = luggage.reduce(
       (acc, item) => {
-        if (item.type === 'cabin') acc.cabin += parseInt(item.quantity);
-        else if (item.type === 'checkin') acc.checkin += parseInt(item.quantity);
-        else if (item.type === 'passenger') acc.passenger += parseInt(item.quantity);
+        if (item.type === "cabin") acc.cabin += parseInt(item.quantity);
+        else if (item.type === "checkin")
+          acc.checkin += parseInt(item.quantity);
+        else if (item.type === "passenger")
+          acc.passenger += parseInt(item.quantity);
         return acc;
       },
       { cabin: 0, checkin: 0, passenger: 0 }
     );
 
     const totalPassengers = parseInt(passengers) + luggageObject.passenger;
-    const finalVias = viaFields.filter((v) => v).join('@');
-    const officeDetails = 'LTX,Taxi Airport Luton,https://www.taxiairportluton.co.uk/,02037403527';
-    const luggageText = luggage.map((item) => item.sendVal).join(',');
+    const finalVias = viaFields.filter((v) => v).join("@");
+    const officeDetails =
+      "LTX,Taxi Airport Luton,https://www.taxiairportluton.co.uk/,02037403527";
+    const luggageText = luggage.map((item) => item.sendVal).join(",");
 
-    const url = `https://booking.londontaxi247.co.uk/OurVehicle/OurVehicle?luggage_text=${luggageText}&pickup=${pickup.value}&checkurl=true&dropoff=${dropoff.value}&office_details=${officeDetails}&luggageobject=${[
+    const url = `https://booking.londontaxi247.co.uk/OurVehicle/OurVehicle?luggage_text=${luggageText}&pickup=${
+      pickup.value
+    }&checkurl=true&dropoff=${
+      dropoff.value
+    }&office_details=${officeDetails}&luggageobject=${[
       luggageObject.cabin,
       luggageObject.checkin,
       totalPassengers,
@@ -187,43 +214,54 @@ const BookingForm = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Pick Up</label>
-          <div className="flex">
-            <AsyncPaginate
-              value={pickup}
-              onChange={setPickup}
-              loadOptions={loadOptions}
-              placeholder="Select pickup address"
-              className="flex-1"
-              minLength={3}
-              classNamePrefix="Select"
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="flex flex-col gap-4">
+          {/* pickup */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Pick Up
+            </label>
+            <div className="flex">
+              <AsyncPaginate
+                value={pickup}
+                onChange={setPickup}
+                loadOptions={loadOptions}
+                placeholder="Select pickup address"
+                className="flex-1"
+                minLength={3}
+                classNamePrefix="Select"
+              />
+              <button
+                onClick={() => setIsPickupAirportModalOpen(true)}
+                className="ml-2 p-2 bg-gray-200 rounded"
+              >
+                <FaPlane />
+              </button>
+            </div>
+          </div>
+          {/* from door */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              From Door No.
+            </label>
+            <input
+              type="text"
+              value={fromDoorNo}
+              onChange={(e) => setFromDoorNo(e.target.value)}
+              placeholder="Door No. For Pick Up"
+              className="w-full p-2 border rounded"
             />
-            <button
-              onClick={() => setIsPickupAirportModalOpen(true)}
-              className="ml-2 p-2 bg-gray-200 rounded"
-            >
-              <FaPlane />
-            </button>
           </div>
         </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">From Door No.</label>
-          <input
-            type="text"
-            value={fromDoorNo}
-            onChange={(e) => setFromDoorNo(e.target.value)}
-            placeholder="Door No. For Pick Up"
-            className="w-full p-2 border rounded"
-          />
-        </div>
+        {/* via input */}
         <div>
           <label className="block text-sm font-medium text-gray-700">Via</label>
           <div className="flex">
             <input
               type="text"
-              value={viaFields.length ? `${viaFields.length} Vias` : 'Via (Optional)'}
+              value={
+                viaFields.length ? `${viaFields.length} Vias` : "Via (Optional)"
+              }
               disabled
               className="flex-1 p-2 border rounded"
             />
@@ -235,106 +273,137 @@ const BookingForm = () => {
             </button>
           </div>
         </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Destination</label>
-          <div className="flex">
-            <AsyncPaginate
-              value={dropoff}
-              onChange={setDropoff}
-              loadOptions={loadOptions}
-              placeholder="Select dropoff address"
-              className="flex-1"
-              minLength={3}
-              classNamePrefix="Select"
-            />
-            <button
-              onClick={() => setIsDropoffAirportModalOpen(true)}
-              className="ml-2 p-2 bg-gray-200 rounded"
-            >
-              <FaPlane />
-            </button>
+        <div className="flex flex-col gap-4">
+          {/* destination off */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Destination
+            </label>
+            <div className="flex">
+              <AsyncPaginate
+                value={dropoff}
+                onChange={setDropoff}
+                loadOptions={loadOptions}
+                placeholder="Select dropoff address"
+                className="flex-1"
+                minLength={3}
+                classNamePrefix="Select"
+              />
+              <button
+                onClick={() => setIsDropoffAirportModalOpen(true)}
+                className="ml-2 p-2 bg-gray-200 rounded"
+              >
+                <FaPlane />
+              </button>
+            </div>
           </div>
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">To Door No.</label>
-          <input
-            type="text"
-            value={toDoorNo}
-            onChange={(e) => setToDoorNo(e.target.value)}
-            placeholder="Door No. For Drop Off"
-            className="w-full p-2 border rounded"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Date</label>
-          <input
-            type="date"
-            value={date}
-            onChange={handleDateChange}
-            className="w-full p-2 border rounded"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Time</label>
-          <input
-            type="time"
-            value={time}
-            onChange={(e) => setTime(e.target.value)}
-            className="w-full p-2 border rounded"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Passenger</label>
-          <div className="flex">
-            <select
-              value={passengers}
-              onChange={(e) => setPassengers(e.target.value)}
-              className="flex-1 p-2 border rounded"
-            >
-              {Array.from({ length: 200 }, (_, i) => i + 1).map((num) => (
-                <option key={num} value={num}>
-                  {num} Passenger{num > 1 ? 's' : ''}
-                </option>
-              ))}
-            </select>
-            <button className="ml-2 p-2 bg-gray-200 rounded">
-              <FaUsers />
-            </button>
-          </div>
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Items</label>
-          <div className="flex">
+          {/* drop off */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              To Door No.
+            </label>
             <input
               type="text"
-              placeholder="Add Items"
-              disabled
-              className="flex-1 p-2 border rounded"
+              value={toDoorNo}
+              onChange={(e) => setToDoorNo(e.target.value)}
+              placeholder="Door No. For Drop Off"
+              className="w-full p-2 border rounded"
             />
-            <button
-              onClick={() => setIsLuggageModalOpen(true)}
-              className="ml-2 p-2 bg-gray-200 rounded"
-            >
-              <FaLuggageCart />
-            </button>
           </div>
         </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Trip</label>
-          <select
-            value={journeyType}
-            onChange={handleJourneyTypeChange}
-            className="w-full p-2 border rounded"
-          >
-            <option>Single Trip</option>
-            <option value="WR">Wait and Return</option>
-          </select>
-        </div>
       </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          {/* date picker */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Date
+            </label>
+            <input
+              type="date"
+              value={date}
+              onChange={handleDateChange}
+              className="w-full p-2 border rounded"
+            />
+          </div>
+          {/* time picker */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Time
+            </label>
+            <input
+              type="time"
+              value={time}
+              onChange={(e) => setTime(e.target.value)}
+              className="w-full p-2 border rounded"
+            />
+          </div>
+          {/* passengers */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Passenger
+            </label>
+            <div className="flex">
+              <select
+                value={passengers}
+                onChange={(e) => setPassengers(e.target.value)}
+                className="flex-1 p-2 border rounded"
+              >
+                {Array.from({ length: 200 }, (_, i) => i + 1).map((num) => (
+                  <option key={num} value={num}>
+                    {num} Passenger{num > 1 ? "s" : ""}
+                  </option>
+                ))}
+              </select>
+              <button className="ml-2 p-2 bg-gray-200 rounded">
+                <FaUsers />
+              </button>
+            </div>
+          </div>
+          {/*  items carring */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Items
+            </label>
+            <div className="flex">
+              <input
+                type="text"
+                placeholder="Add Items"
+                disabled
+                className="flex-1 p-2 border rounded"
+              />
+              <button
+                onClick={() => setIsLuggageModalOpen(true)}
+                className="ml-2 p-2 bg-gray-200 rounded"
+              >
+                <FaLuggageCart />
+              </button>
+            </div>
+          </div>
+          {/*  journey type */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Trip
+            </label>
+            <select
+              value={journeyType}
+              onChange={handleJourneyTypeChange}
+              className="w-full p-2 border rounded"
+            >
+              <option>Single Trip</option>
+              <option value="WR">Wait and Return</option>
+            </select>
+          </div>
+        </div>
+      {/* selected item */}
       <div className="mt-4 flex flex-wrap gap-4">
         {luggage.map((item) => (
-          <div key={item.name} className="flex items-center bg-gray-200 p-2 rounded">
-            <span>{item.quantity} {item.name}</span>
+          <div
+            key={item.name}
+            className="flex items-center bg-gray-200 p-2 rounded"
+          >
+            <span>
+              {item.quantity} {item.name}
+            </span>
             <button
               onClick={() => handleRemoveLuggage(item.name)}
               className="ml-2 text-red-500"
@@ -344,6 +413,7 @@ const BookingForm = () => {
           </div>
         ))}
       </div>
+      {/* submit buton */}
       <div className="mt-4 text-center">
         <button
           onClick={handleGetQuotes}
@@ -357,6 +427,8 @@ const BookingForm = () => {
           <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
         </div>
       )}
+
+      {/* Modals */}
       <ViaModal
         isOpen={isViaModalOpen}
         onClose={() => setIsViaModalOpen(false)}
