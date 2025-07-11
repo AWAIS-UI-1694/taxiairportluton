@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaTimes } from 'react-icons/fa';
 
 const airports = [
   { value: 'LONDON HEATHROW AIRPORT TERMINAL 1 | TW6 1AP', label: 'HEATHROW TERMINAL 1' },
@@ -21,8 +22,8 @@ const AirportModal = ({ isOpen, onClose, onSelect }) => {
       <div className="bg-white p-6 rounded-lg w-full max-w-md">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold">Airports</h2>
-          <button onClick={onClose} className="text-red-500">
-            <img src="/images/close.webp" alt="close" className="w-6 h-6" />
+          <button onClick={onClose} className="">
+            <FaTimes className="text-red-500 cursor-pointer" />
           </button>
         </div>
         <div className="max-h-96 overflow-y-auto">
@@ -42,7 +43,7 @@ const AirportModal = ({ isOpen, onClose, onSelect }) => {
         <div className="mt-4">
           <button
             onClick={onClose}
-            className="bg-gray-500 text-white px-4 py-2 rounded w-full"
+            className="bg-yellow-500 text-black px-4 py-2 rounded w-full"
           >
             Close
           </button>

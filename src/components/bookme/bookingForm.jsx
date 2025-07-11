@@ -348,6 +348,7 @@ const BookingForm = () => {
             </label>
             <div className="flex">
               <select
+                
                 value={passengers}
                 onChange={(e) => setPassengers(e.target.value)}
                 className="flex-1 p-2 border rounded"

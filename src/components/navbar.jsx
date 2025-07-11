@@ -30,13 +30,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="text-black bg-white shadow-md">
+    <nav className="text-white bg-black shadow-md m-2 rounded-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/">
-              <img src={logo} alt="Taxi Airport Luton" className="h-16" />
+              <img src={logo} alt="Taxi Airport Luton" className="h-10" />
             </Link>
           </div>
 
