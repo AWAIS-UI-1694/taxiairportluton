@@ -1,6 +1,6 @@
 // images import
 import { Link } from "react-router-dom";
-import airportdemo from "../../assets/images/airportdemo.jpg";
+import airportdemo from "../../assets/images/airportdemo.webp";
 
 
 

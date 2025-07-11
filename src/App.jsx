@@ -28,6 +28,15 @@ import BookingForm from "./components/bookme/bookingForm";
 
 // Utils
 import GoToTopButton from "./utils/goToTop.jsx";
+import PetTransport from "./pages/services/petTransport.jsx";
+import HotelTransport from "./pages/services/hotelTransport.jsx";
+import CharingCrossStation from "./pages/stationPages/charingCrossStation.jsx";
+import LondonBridgeStation from "./pages/stationPages/londonBridgeStation.jsx";
+import WaterlooStation from "./pages/stationPages/waterlooStation.jsx";
+import VictoriaStation from "./pages/stationPages/victoriaStation.jsx";
+import PaddingtonStation from "./pages/stationPages/paddingtonStation.jsx";
+import KingsCrossStation from "./pages/stationPages/kingsCrossStation.jsx";
+import EustonStation from "./pages/stationPages/eustonStation.jsx";
 
 function App() {
   return (
@@ -54,6 +63,19 @@ function App() {
             <Route path="/gatwickAirport" element={<GatwickAirport />} />
             <Route path="/stanstedAirport" element={<StanstedAirport />} />
             <Route path="/heathrowAirport" element={<HeathrowAirport />} />
+
+            {/* Stations Pages */}
+            <Route path="/charingCrossStation" element={<CharingCrossStation />} />
+            <Route path="/londonBridgeStation" element={<LondonBridgeStation />} />
+            <Route path="/waterlooStation" element={<WaterlooStation />} />
+            <Route path="/victoriaStation" element={<VictoriaStation />} />
+            <Route path="/paddingtonStation" element={<PaddingtonStation />} />
+            <Route path="/kingsCrossStation" element={<KingsCrossStation />} />
+            <Route path="/eustonStation" element={<EustonStation />} />
+
+            {/* Services */}
+            <Route path="/petTransport" element={<PetTransport />} />
+            <Route path="/hotelTransport" element={<HotelTransport />} />
 
             {/* Other Pages */}
             <Route path="/contact" element={<Contact />} />

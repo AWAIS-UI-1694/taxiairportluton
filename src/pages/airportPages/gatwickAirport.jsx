@@ -1,7 +1,7 @@
 import HeroDynamic from "../../components/herodynamic";
-import airpoerHero from "../../assets/images/airporthero.jpg";
-import airportTaxi from "../../assets/images/airporttaxi.jpg";
-import airportTaxi2 from "../../assets/images/airporttaxi2.jpg";
+import airpoerHero from "../../assets/images/airporthero.webp";
+import airportTaxi from "../../assets/images/airporttaxi.webp";
+import airportTaxi2 from "../../assets/images/airporttaxi2.webp";
 const GatwickAirport = () => {
   return (
     <>
@@ -10,7 +10,7 @@ const GatwickAirport = () => {
         title="Taxi Airport Luton to Gatwick"
         description="Taxi Airport Luton to Gatwick offers a 24/7 taxi service to and from Luton Airport, as well as cheap cab quotes for airport transfers. Transfers from Gatwick Airport to Luton are available through us. "
         buttonText="Book Now"
-        buttonLink="/contact"
+        buttonLink="/bookingForm"
         backgroundImage={airpoerHero}
         imageAlt="airport hero img"
       />

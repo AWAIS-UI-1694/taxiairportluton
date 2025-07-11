@@ -1,7 +1,7 @@
 import HeroDynamic from "../../components/herodynamic";
-import herostation from "../../assets/images/stationdemo.jpg";
-import taxi from "../../assets/images/taxi.jpg";
-import taxi2 from "../../assets/images/taxi2.jpg";
+import herostation from "../../assets/images/stationdemo.webp";
+import taxi from "../../assets/images/taxi.webp";
+import taxi2 from "../../assets/images/taxi2.webp";
 
 const EastLondon = () => {
   return (
@@ -10,7 +10,7 @@ const EastLondon = () => {
         title="East London Taxi to Luton Airport"
         description="East London Taxi to Luton Airport provides reliable airport transfer services around the clock, with no extra fees for delays, safe bookings, and professional transportation for both individuals and groups."
         buttonText="Book Now"
-        buttonLink="/contact"
+        buttonLink="/bookingForm"
         backgroundImage={herostation}
         imageAlt="East London Taxi"
       />

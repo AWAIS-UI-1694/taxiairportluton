@@ -22,7 +22,7 @@ const AirportModal = ({ isOpen, onClose, onSelect }) => {
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold">Airports</h2>
           <button onClick={onClose} className="text-red-500">
-            <img src="/images/close.png" alt="close" className="w-6 h-6" />
+            <img src="/images/close.webp" alt="close" className="w-6 h-6" />
           </button>
         </div>
         <div className="max-h-96 overflow-y-auto">

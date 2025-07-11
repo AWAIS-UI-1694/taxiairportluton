@@ -1,5 +1,5 @@
-import stationdemo from "../../../assets/images/stationdemo.jpg";
-import airportdemo from "../../../assets/images/airportdemo.jpg";
+import stationdemo from "../../../assets/images/stationdemo.webp";
+import airportdemo from "../../../assets/images/airportdemo.webp";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";

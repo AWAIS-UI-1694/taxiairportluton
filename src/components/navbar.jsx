@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.webp';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -8,13 +8,14 @@ const Navbar = () => {
     airports: false,
     areas: false,
     stations: false,
+    services: false,
   });
 
   const location = useLocation();
 
   // Close dropdowns and mobile menu on route change
   useEffect(() => {
-    setDropdowns({ airports: false, areas: false, stations: false });
+    setDropdowns({ airports: false, areas: false, stations: false, services: false });
     setMobileMenuOpen(false);
   }, [location]);
 
@@ -23,6 +24,7 @@ const Navbar = () => {
       airports: false,
       areas: false,
       stations: false,
+      services: false,
       [type]: !prev[type],
     }));
   };
@@ -100,8 +102,32 @@ const Navbar = () => {
               </button>
               {dropdowns.stations && (
                 <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48 z-50">
-                  <Link to="/paddington" className="block px-4 py-2 hover:bg-gray-100">Paddington</Link>
-                  <Link to="/euston" className="block px-4 py-2 hover:bg-gray-100">Euston</Link>
+                      <Link to="/paddingtonStation" className="block hover:bg-gray-100 px-2 py-1">Paddington</Link>
+                      <Link to="/eustonStation" className="block hover:bg-gray-100 px-2 py-1">Euston</Link>
+                      <Link to="/charingCrossStation" className="block hover:bg-gray-100 px-2 py-1">Charing Cross</Link>
+                      <Link to="/kingsCrossStation" className="block hover:bg-gray-100 px-2 py-1">Kings Cross</Link>
+                      <Link to="/londonBridgeStation" className="block hover:bg-gray-100 px-2 py-1">London Bridge</Link>
+                      <Link to="/VictoriaStation" className="block hover:bg-gray-100 px-2 py-1">Victoria</Link>
+                      <Link to="/waterlooStation" className="block hover:bg-gray-100 px-2 py-1">Waterloo</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('services')}
+                className="hover:text-yellow-400 flex items-center gap-1"
+              >
+                services
+                <svg className={`w-4 h-4 transition-transform ${dropdowns.services ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {dropdowns.services && (
+                <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48 z-50">
+                      <Link to="/paddingtonStation" className="block hover:bg-gray-100 px-2 py-1">Paddington</Link>
+                      <Link to="/eustonStation" className="block hover:bg-gray-100 px-2 py-1">Euston</Link>                
                 </div>
               )}
             </div>
@@ -128,7 +154,7 @@ const Navbar = () => {
           <Link to="/about" className="block hover:bg-gray-800 px-2 py-1">About</Link>
 
           {/* Mobile Dropdowns */}
-          {['airports', 'areas', 'stations'].map((type) => (
+          {['airports', 'areas', 'stations', 'services'].map((type) => (
             <div key={type}>
               <button
                 onClick={() => toggleDropdown(type)}
@@ -158,8 +184,19 @@ const Navbar = () => {
                   )}
                   {type === 'stations' && (
                     <>
-                      <Link to="/paddington" className="block hover:bg-gray-700 px-2 py-1">Paddington</Link>
-                      <Link to="/euston" className="block hover:bg-gray-700 px-2 py-1">Euston</Link>
+                      <Link to="/paddingtonStation" className="block hover:bg-gray-100 px-2 py-1">Paddington</Link>
+                      <Link to="/eustonStation" className="block hover:bg-gray-100 px-2 py-1">Euston</Link>
+                      <Link to="/charingCrossStation" className="block hover:bg-gray-100 px-2 py-1">Charing Cross</Link>
+                      <Link to="/kingsCrossStation" className="block hover:bg-gray-100 px-2 py-1">Kings Cross</Link>
+                      <Link to="/londonBridgeStation" className="block hover:bg-gray-100 px-2 py-1">London Bridge</Link>
+                      <Link to="/VictoriaStation" className="block hover:bg-gray-100 px-2 py-1">Victoria</Link>
+                      <Link to="/waterlooStation" className="block hover:bg-gray-100 px-2 py-1">Waterloo</Link>
+                    </>
+                  )}
+                  {type === 'services' && (
+                    <>
+                      <Link to="/paddingtonStation" className="block hover:bg-gray-100 px-2 py-1">Paddington</Link>
+                      <Link to="/eustonStation" className="block hover:bg-gray-100 px-2 py-1">Euston</Link>
                     </>
                   )}
                 </div>

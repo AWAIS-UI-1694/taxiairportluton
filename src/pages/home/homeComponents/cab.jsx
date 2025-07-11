@@ -1,7 +1,7 @@
-import mpv from "../../../assets/images/mpv.png";
-import saloon from "../../../assets/images/saloon.png";
-import estate from "../../../assets/images/estate.png";
-import exacutive from "../../../assets/images/exacutive.png";
+import mpv from "../../../assets/images/mpv.webp";
+import saloon from "../../../assets/images/saloon.webp";
+import estate from "../../../assets/images/estate.webp";
+import exacutive from "../../../assets/images/exacutive.webp";
 import { useState } from "react";
 import { FaBriefcase, FaSuitcaseRolling, FaUserFriends } from "react-icons/fa";
 

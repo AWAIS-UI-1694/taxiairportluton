@@ -1,5 +1,5 @@
 import HeroDynamic from "../../components/herodynamic";
-import contacthero from "../../assets/images/contact.jpg";
+import contacthero from "../../assets/images/contact.webp";
 import ContactDynamic from "../../components/contactDynamic";
 
 const Contact = () => {

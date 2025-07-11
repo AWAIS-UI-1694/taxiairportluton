@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import airportdemo from "../../../assets/images/airportdemo.jpg";
+import airportdemo from "../../../assets/images/airportdemo.webp";
 
 
 const Airport = () => {
      const airports = [
         { name: "London", path: "/londonAirport", image: airportdemo },
-        { name: "Heathrow", path: "/heathrowAirport", image: "heathrow.jpg" },
-        { name: "Gatwick", path: "/gatwickAirport", image: "gatwick.jpg" },
-        { name: "Stansted", path: "/stanstedAirport", image: "stansted.jpg" },
+        { name: "Heathrow", path: "/heathrowAirport", image: "heathrow.webp" },
+        { name: "Gatwick", path: "/gatwickAirport", image: "gatwick.webp" },
+        { name: "Stansted", path: "/stanstedAirport", image: "stansted.webp" },
       ];
     return (
         <>
