@@ -3,10 +3,24 @@ import HeroDynamic from "../../components/herodynamic";
 import stationhero from "../../assets/images/stationhero.webp";
 import station1 from "../../assets/images/station1.webp";
 import station2 from "../../assets/images/station2.webp";
+import { Helmet } from "react-helmet-async";
 
 const KingsCrossStation = () => {
     return (
         <>
+      <Helmet>
+        <title>
+          Taxis Luton Airport to Kings Cross Station—Kings Cross Taxis
+        </title>
+        <meta
+          name="description"
+          content="Taxis Luton Airport—Cheap and reliable taxi service from Luton to Kings Cross offers fixed fares, 24/7 minicabs to and from Luton with meet and greet."
+        />
+        <link
+          rel="canonical"
+          href="https://taxiairportluton.com/kingsCrossStation"
+        />
+      </Helmet>
         {/* hero dynamic start */}
       <HeroDynamic
         title="Taxis Luton Airport to King's Cross"
@@ -61,7 +75,7 @@ const KingsCrossStation = () => {
             <img
               src={station1}
               alt="Why Choose Us"
-              className="rounded-lg max-max-h-screen shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg max-max-h-screen shadow-md w-full"
             />
           </div>
         </div>
@@ -111,7 +125,7 @@ const KingsCrossStation = () => {
             <img
               src={station2}
               alt="Comfortable Vehicles"
-              className="rounded-lg shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg shadow-md w-full"
             />
           </div>
           <div className="w-full md:w-1/2 ">

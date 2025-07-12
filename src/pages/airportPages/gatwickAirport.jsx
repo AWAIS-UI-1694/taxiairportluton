@@ -64,7 +64,7 @@ const GatwickAirport = () => {
             <img
               src={airportTaxi}
               alt="Why Choose Us"
-              className="rounded-lg max-max-h-screen shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg max-max-h-screen shadow-md w-full"
             />
           </div>
         </div>
@@ -113,7 +113,7 @@ const GatwickAirport = () => {
             <img
               src={airportTaxi2}
               alt="Comfortable Vehicles"
-              className="rounded-lg shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg shadow-md w-full"
             />
           </div>
           <div className="w-full md:w-1/2 ">

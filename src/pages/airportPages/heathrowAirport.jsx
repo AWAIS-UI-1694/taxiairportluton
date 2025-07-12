@@ -2,10 +2,16 @@ import HeroDynamic from "../../components/herodynamic";
 import airpoerHero from "../../assets/images/airporthero.webp";
 import airportTaxi from "../../assets/images/airporttaxi.webp";
 import airportTaxi2 from "../../assets/images/airporttaxi2.webp";
+import { Helmet } from "react-helmet-async";
 
 const heatthrowAirport = () => {
   return (
     <>
+    <Helmet>
+                <title>Taxi Airport Luton to Heathrow – Taxi from Luton Airport to Heathrow</title>
+                <meta name="description" content="Taxi Airport Luton to Heathrow offers cheap, fixed-fare taxi services to and from Heathrow terminal, and to get quotes, book online on our website." />
+                <link rel="canonical" href="https://taxiairportluton.com/heathrowAirport" />
+              </Helmet>
       {/* hero dynamic start */}
       <HeroDynamic
         title="Taxi Airport Luton to Heathrow"
@@ -59,7 +65,7 @@ const heatthrowAirport = () => {
             <img
               src={airportTaxi}
               alt="Why Choose Us"
-              className="rounded-lg max-max-h-screen shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg max-max-h-screen shadow-md w-full"
             />
           </div>
         </div>
@@ -108,7 +114,7 @@ const heatthrowAirport = () => {
             <img
               src={airportTaxi2}
               alt="Comfortable Vehicles"
-              className="rounded-lg shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg shadow-md w-full"
             />
           </div>
           <div className="w-full md:w-1/2 ">

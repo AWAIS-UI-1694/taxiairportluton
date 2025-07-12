@@ -2,10 +2,24 @@ import HeroDynamic from "../../components/herodynamic";
 import stationhero from "../../assets/images/stationhero.webp";
 import station1 from "../../assets/images/station1.webp";
 import station2 from "../../assets/images/station2.webp";
+import { Helmet } from "react-helmet-async";
 
 const LondonBridgeStation = () => {
   return (
     <>
+      <Helmet>
+        <title>
+          Taxis Luton Airport to London Bridge Station—London Bridge Taxis
+        </title>
+        <meta
+          name="description"
+          content="Taxis Luton Airport—Cheap and reliable taxi service from Luton to London Bridge offers fixed fares, 24/7 minicabs to and from Luton with meet and greet."
+        />
+        <link
+          rel="canonical"
+          href="https://taxiairportluton.com/londonBridgeStation"
+        />
+      </Helmet>
       {/* hero dynamic start */}
       <HeroDynamic
         title="Taxis Luton Airport to London Bridge"
@@ -60,7 +74,7 @@ const LondonBridgeStation = () => {
             <img
               src={station1}
               alt="Why Choose Us"
-              className="rounded-lg max-max-h-screen shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg max-max-h-screen shadow-md w-full"
             />
           </div>
         </div>
@@ -73,7 +87,7 @@ const LondonBridgeStation = () => {
             </h2>
             <p className="text-lg  text-gray-700">
               You can count on the Luton to London Bridge Cabs service. Our
-              Kings Cross cabs are the best option because they are cheap,
+              London Bridge cabs are the best option because they are cheap,
               comfortable, and simple to use. Our London Bridge cabs will get
               you to your destination quickly and easily, no matter where you're
               coming from—Camden, Westminster, or the West End. You can take a
@@ -108,7 +122,7 @@ const LondonBridgeStation = () => {
             <img
               src={station2}
               alt="Comfortable Vehicles"
-              className="rounded-lg shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg shadow-md w-full"
             />
           </div>
           <div className="w-full md:w-1/2 ">
@@ -139,7 +153,7 @@ const LondonBridgeStation = () => {
               With fixed fares, you'll know exactly what to expect, with no
               surprises on your journey. You can stop searching for affordable
               taxis in the vicinity of London Bridge. You can get a minicab from
-              Kings Cross Station anytime, day or night, thanks to our reliable
+              London Bridge Station anytime, day or night, thanks to our reliable
               taxi service.
               <br />
               <br />

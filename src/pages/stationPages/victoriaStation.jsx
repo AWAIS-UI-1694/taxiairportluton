@@ -2,10 +2,24 @@ import HeroDynamic from "../../components/herodynamic";
 import stationhero from "../../assets/images/stationhero.webp";
 import station1 from "../../assets/images/station1.webp";
 import station2 from "../../assets/images/station2.webp";
+import { Helmet } from "react-helmet-async";
 
 const VictoriaStation = () => {
     return (
         <>
+      <Helmet>
+        <title>
+          Taxis Luton Airport to Victoria Station—Victoria Taxis
+        </title>
+        <meta
+          name="description"
+          content="Taxis Luton Airport—Cheap and reliable taxi service from Luton to Victoria offers fixed fares, 24/7 minicabs to and from Luton with meet and greet."
+        />
+        <link
+          rel="canonical"
+          href="https://taxiairportluton.com/victoriaStation"
+        />
+      </Helmet>
  {/* hero dynamic start */}
       <HeroDynamic
         title="Taxis Luton Airport to Victoria"
@@ -60,7 +74,7 @@ const VictoriaStation = () => {
             <img
               src={station1}
               alt="Why Choose Us"
-              className="rounded-lg max-max-h-screen shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg max-max-h-screen shadow-md w-full"
             />
           </div>
         </div>
@@ -73,8 +87,8 @@ const VictoriaStation = () => {
               Luton to Victoria Cabs
             </h2>
             <p className="text-lg  text-gray-700">
-              You can count on the Luton to Victoria Cabs service. Our Kings
-              Cross cabs are the best option because they are cheap,
+              You can count on the Luton to Victoria Cabs service. Our Victoria
+               cabs are the best option because they are cheap,
               comfortable, and simple to use. Our Victoria cabs will get you
               to your destination quickly and easily, no matter where you're
               coming from—Camden, Westminster, or the West End. You can take a
@@ -110,7 +124,7 @@ const VictoriaStation = () => {
             <img
               src={station2}
               alt="Comfortable Vehicles"
-              className="rounded-lg shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg shadow-md w-full"
             />
           </div>
           <div className="w-full md:w-1/2 ">
@@ -141,8 +155,8 @@ const VictoriaStation = () => {
               stops or changes like you do with public transportation. With
               fixed fares, you'll know exactly what to expect, with no surprises
               on your journey. You can stop searching for affordable taxis in
-              the vicinity of Victoria. You can get a minicab from Kings
-              Cross Station anytime, day or night, thanks to our reliable taxi
+              the vicinity of Victoria. You can get a minicab from Victoria
+               Station anytime, day or night, thanks to our reliable taxi
               service.
               <br />
               <br />
@@ -152,8 +166,8 @@ const VictoriaStation = () => {
               choices.
               <br />
               <br />
-              You deserve great service, so book a taxi or minicab to Kings
-              Cross Station today. Enjoy a pleasant ride with fair pricing and
+              You deserve great service, so book a taxi or minicab to Victoria
+               Station today. Enjoy a pleasant ride with fair pricing and
               travel with peace of mind.
             </p>
           </div>

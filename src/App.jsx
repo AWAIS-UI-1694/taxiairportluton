@@ -83,8 +83,8 @@ function App() {
             <Route path="/eustonStation" element={<EustonStation />} />
 
             {/* Services */}
-            <Route path="/petTransport" element={<PetServices />} />
-            <Route path="/hotelTransport" element={<HotelServices />} />
+            <Route path="/petServices" element={<PetServices />} />
+            <Route path="/hotelServices" element={<HotelServices />} />
 
             {/* Other Pages */}
             <Route path="/contact" element={<Contact />} />

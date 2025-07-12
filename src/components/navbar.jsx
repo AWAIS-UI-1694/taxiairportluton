@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="text-white sticky bg-black shadow-md m-2 rounded-xl">
+    <nav className="text-white bg-black shadow-md m-2 rounded-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -107,7 +107,7 @@ const Navbar = () => {
                       <Link to="/charingCrossStation" className="block hover:bg-gray-100 px-2 py-1">Charing Cross</Link>
                       <Link to="/kingsCrossStation" className="block hover:bg-gray-100 px-2 py-1">Kings Cross</Link>
                       <Link to="/londonBridgeStation" className="block hover:bg-gray-100 px-2 py-1">London Bridge</Link>
-                      <Link to="/VictoriaStation" className="block hover:bg-gray-100 px-2 py-1">Victoria</Link>
+                      <Link to="/victoriaStation" className="block hover:bg-gray-100 px-2 py-1">Victoria</Link>
                       <Link to="/waterlooStation" className="block hover:bg-gray-100 px-2 py-1">Waterloo</Link>
                 </div>
               )}
@@ -189,7 +189,7 @@ const Navbar = () => {
                       <Link to="/charingCrossStation" className="block hover:bg-gray-100 px-2 py-1">Charing Cross</Link>
                       <Link to="/kingsCrossStation" className="block hover:bg-gray-100 px-2 py-1">Kings Cross</Link>
                       <Link to="/londonBridgeStation" className="block hover:bg-gray-100 px-2 py-1">London Bridge</Link>
-                      <Link to="/VictoriaStation" className="block hover:bg-gray-100 px-2 py-1">Victoria</Link>
+                      <Link to="/victoriaStation" className="block hover:bg-gray-100 px-2 py-1">Victoria</Link>
                       <Link to="/waterlooStation" className="block hover:bg-gray-100 px-2 py-1">Waterloo</Link>
                     </>
                   )}

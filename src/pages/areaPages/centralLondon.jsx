@@ -2,9 +2,15 @@ import HeroDynamic from "../../components/herodynamic";
 import herostation from "../../assets/images/stationdemo.webp";
 import taxi from "../../assets/images/taxi.webp";
 import taxi2 from "../../assets/images/taxi2.webp";
+import { Helmet } from "react-helmet-async";
 const CentralLondon = () => {
   return (
     <>
+    <Helmet>
+                <title>Central London Taxi to Luton Airport – Taxi Airport Luton</title>
+                <meta name="description" content="Central London Taxi to Luton Airport offers 24/7 affordable transfers with no delay fees, safe bookings, and group options like 8-seater taxis." />
+                <link rel="canonical" href="https://taxiairportluton.com/centralLondon" />
+              </Helmet>
       {/* hero dynamic start */}
       <HeroDynamic
         title="Central London Taxi to Luton Airport"
@@ -50,7 +56,7 @@ const CentralLondon = () => {
             <img
               src={taxi}
               alt="Why Choose Us"
-              className="rounded-lg max-max-h-screen shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg max-max-h-screen shadow-md w-full"
             />
           </div>
         </div>
@@ -103,7 +109,7 @@ const CentralLondon = () => {
             <img
               src={taxi2}
               alt="Comfortable Vehicles"
-              className="rounded-lg shadow-md w-full"
+              className="hidden  md:block max-h-svh rounded-lg shadow-md w-full"
             />
           </div>
           <div className="w-full md:w-1/2 ">

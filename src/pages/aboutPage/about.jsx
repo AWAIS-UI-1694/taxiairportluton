@@ -49,7 +49,7 @@ const About = () => {
             <img
               src={aboutimg}
               alt="Taxi Airport Luton"
-              className="rounded-lg shadow-lg w-full"
+              className="hidden  md:block max-h-svh rounded-lg shadow-lg w-full"
             />
           </div>
         </div>
