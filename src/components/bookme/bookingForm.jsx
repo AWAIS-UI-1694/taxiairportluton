@@ -213,8 +213,8 @@ const BookingForm = () => {
   };
 
   return (
-    <div className="container mx-auto md:h-svh py-12 w-full justify-center content-center p-4">
-      <h1 className="text-5xl font-bold text-center mb-10">
+    <div className="container mx-auto md:h-svh py-20 w-full  justify-center content-center p-4">
+      <h1 className="text-4xl md:text-5xl font-bold text-center mb-10">
         Book Your Taxi
       </h1>
      <div className="my-auto">
