@@ -5,6 +5,11 @@ import airportTaxi2 from "../../assets/images/airporttaxi2.webp";
 const GatwickAirport = () => {
   return (
     <>
+     <Helmet>
+            <title>Taxi Airport Luton to Gatwick – Taxi from Luton Airport to Gatwick</title>
+            <meta name="description" content="Taxi Airport Luton to Gatwick offers cheap, fixed-fare taxi services to and from Gatwick terminal, and to get quotes, book online on our website." />
+            <link rel="canonical" href="https://taxiairportluton.com/gatwickAirport" />
+          </Helmet>
       {/* hero dynamic start */}
       <HeroDynamic
         title="Taxi Airport Luton to Gatwick"
