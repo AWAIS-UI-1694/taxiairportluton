@@ -44,6 +44,7 @@ import BookingForm from "./components/bookme/bookingForm";
 
 // Utils
 import GoToTopButton from "./utils/goToTop.jsx";
+import NotFound from "./utils/404.jsx";
 
 
 function App() {
@@ -88,6 +89,9 @@ function App() {
             {/* Other Pages */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+
+            {/* 404 not found page */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <GoToTopButton />
