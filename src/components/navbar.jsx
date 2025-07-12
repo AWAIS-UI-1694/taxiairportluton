@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="text-white bg-black shadow-md m-2 rounded-xl">
+<nav className="text-white fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-70 backdrop-blur-sm shadow-md transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -166,37 +166,37 @@ const Navbar = () => {
                 <div className="ml-4 space-y-1">
                   {type === 'airports' && (
                     <>
-                  <Link to="/londonAirport" className="block px-4 py-2 hover:bg-gray-100">London Airport</Link>
-                  <Link to="/gatwickAirport" className="block px-4 py-2 hover:bg-gray-100">Gatwick Airport</Link>
-                  <Link to="/stanstedAirport" className="block px-4 py-2 hover:bg-gray-100">Stansted Airport</Link>
-                  <Link to="/heathrowAirport" className="block px-4 py-2 hover:bg-gray-100">Heathrow Airport</Link>
+                  <Link to="/londonAirport" className="block px-4 py-2 hover:bg-gray-100 hover:text-black">London Airport</Link>
+                  <Link to="/gatwickAirport" className="block px-4 py-2 hover:bg-gray-100 hover:text-black">Gatwick Airport</Link>
+                  <Link to="/stanstedAirport" className="block px-4 py-2 hover:bg-gray-100 hover:text-black">Stansted Airport</Link>
+                  <Link to="/heathrowAirport" className="block px-4 py-2 hover:bg-gray-100 hover:text-black">Heathrow Airport</Link>
                     </>
                   )}
                   {type === 'areas' && (
                     <>
-                      <Link to="/london" className="block px-4 py-2 hover:bg-gray-100">London Taxi</Link>
-                      <Link to="/eastLondon" className="block px-4 py-2 hover:bg-gray-100">East London Taxi</Link>
-                      <Link to="/westLondon" className="block px-4 py-2 hover:bg-gray-100">West London Taxi</Link>
-                      <Link to="/northLondon" className="block px-4 py-2 hover:bg-gray-100">North London Taxi</Link>
-                      <Link to="/southLondon" className="block px-4 py-2 hover:bg-gray-100">South London Taxi</Link>
-                      <Link to="/centralLondon" className="block px-4 py-2 hover:bg-gray-100">Central London Taxi</Link>
+                      <Link to="/london" className="block px-4 py-2 hover:bg-gray-100 hover:text-black">London Taxi</Link>
+                      <Link to="/eastLondon" className="block px-4 py-2 hover:bg-gray-100 hover:text-black">East London Taxi</Link>
+                      <Link to="/westLondon" className="block px-4 py-2 hover:bg-gray-100 hover:text-black">West London Taxi</Link>
+                      <Link to="/northLondon" className="block px-4 py-2 hover:bg-gray-100 hover:text-black">North London Taxi</Link>
+                      <Link to="/southLondon" className="block px-4 py-2 hover:bg-gray-100 hover:text-black">South London Taxi</Link>
+                      <Link to="/centralLondon" className="block px-4 py-2 hover:bg-gray-100 hover:text-black">Central London Taxi</Link>
                     </>
                   )}
                   {type === 'stations' && (
                     <>
-                      <Link to="/paddingtonStation" className="block hover:bg-gray-100 px-2 py-1">Paddington</Link>
-                      <Link to="/eustonStation" className="block hover:bg-gray-100 px-2 py-1">Euston</Link>
-                      <Link to="/charingCrossStation" className="block hover:bg-gray-100 px-2 py-1">Charing Cross</Link>
-                      <Link to="/kingsCrossStation" className="block hover:bg-gray-100 px-2 py-1">Kings Cross</Link>
-                      <Link to="/londonBridgeStation" className="block hover:bg-gray-100 px-2 py-1">London Bridge</Link>
-                      <Link to="/victoriaStation" className="block hover:bg-gray-100 px-2 py-1">Victoria</Link>
-                      <Link to="/waterlooStation" className="block hover:bg-gray-100 px-2 py-1">Waterloo</Link>
+                      <Link to="/paddingtonStation" className="block hover:bg-gray-100 hover:text-black px-2 py-1">Paddington</Link>
+                      <Link to="/eustonStation" className="block hover:bg-gray-100 hover:text-black px-2 py-1">Euston</Link>
+                      <Link to="/charingCrossStation" className="block hover:bg-gray-100 hover:text-black px-2 py-1">Charing Cross</Link>
+                      <Link to="/kingsCrossStation" className="block hover:bg-gray-100 hover:text-black px-2 py-1">Kings Cross</Link>
+                      <Link to="/londonBridgeStation" className="block hover:bg-gray-100 hover:text-black px-2 py-1">London Bridge</Link>
+                      <Link to="/victoriaStation" className="block hover:bg-gray-100 hover:text-black px-2 py-1">Victoria</Link>
+                      <Link to="/waterlooStation" className="block hover:bg-gray-100 hover:text-black px-2 py-1">Waterloo</Link>
                     </>
                   )}
                   {type === 'services' && (
                     <>
-                      <Link to="/petServices" className="block hover:bg-gray-100 px-2 py-1">Luton Pet Service</Link>
-                      <Link to="/hotelServices" className="block hover:bg-gray-100 px-2 py-1">Luton Hotel Transfer</Link> 
+                      <Link to="/petServices" className="block hover:bg-gray-100 hover:text-black px-2 py-1">Luton Pet Service</Link>
+                      <Link to="/hotelServices" className="block hover:bg-gray-100 hover:text-black px-2 py-1">Luton Hotel Transfer</Link> 
                     </>
                   )}
                 </div>

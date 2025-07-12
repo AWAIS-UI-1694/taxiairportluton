@@ -1,8 +1,8 @@
 import HeroDynamic from "../../components/herodynamic";
-import hotelHero from "../../assets/images/hotelhero.jpg";
+import hotelHero from "../../assets/images/hotelhero.webp";
 import { Helmet } from "react-helmet-async";
-import hotel2 from "../../assets/images/hotel2.jpg";
-import hotel3 from "../../assets/images/hotel3.jpg";
+import hotel2 from "../../assets/images/hotel2.webp";
+import hotel3 from "../../assets/images/hotel3.webp";
 const HotelServices = () => {
   return (
     <>

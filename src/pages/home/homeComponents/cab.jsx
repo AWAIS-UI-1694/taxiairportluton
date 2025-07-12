@@ -64,7 +64,7 @@ const Cab = () => {
           </div>
 
           {/* Cab Details */}
-          <div className="flex flex-col md:flex-row h-86 md:min-h-72 items-center justify-center gap-8">
+          <div className="flex flex-col md:flex-row h-86 md:min-h-72 my-12 items-center justify-center gap-8">
             <img
               src={selected.image}
               alt={selected.name}

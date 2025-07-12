@@ -1,11 +1,12 @@
 import demo from "../../../assets/images/demo.webp";
-
+import home1 from "../../../assets/images/home1.webp"
+import home2 from "../../../assets/images/home2.webp"
 const HomeContent = () => {
   return (
     <>
       <section className="max-w-7xl mx-auto px-4 py-16 space-y-24">
         {/* Row 1: Text Left, Image Right */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-0 md:gap-10 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-4">Taxi Airport Luton</h2>
             <p className="text-lg text-gray-700">
@@ -23,22 +24,7 @@ const HomeContent = () => {
               the best choice for both business and leisure travellers.
               <br />
               <br />
-            </p>
-          </div>
-          <div>
-            <img
-              src={demo}
-              alt="Why Choose Us"
-              className="w-full h-auto rounded-lg shadow-md"
-            />
-          </div>
-        </div>
-
-        {/* Row 2: Image Left, Text Right */}
-        <div className="items-center">
-          <div>
-            <p className="text-lg text-gray-700">
-              Taxi Airport Luton makes it easy and stress-free to book a cheap
+               Taxi Airport Luton makes it easy and stress-free to book a cheap
               Luton taxi or the cheapest Luton taxi service near me. We can help
               you with any transfer, whether it's a local drop-off or a Luton
               Airport taxi service.
@@ -53,14 +39,22 @@ const HomeContent = () => {
               smooth, cheap travel.
             </p>
           </div>
+          <div>
+            <img
+              src={home1}
+              alt="Why Choose Us"
+              className="hidden md:block w-full max-h-svh rounded-lg shadow-md"
+            />
+          </div>
         </div>
+
         {/* Row 2: Image Left, Text Right */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-0 md:gap-10 items-center">
           <div className="order-1 md:order-none">
             <img
-              src={demo}
+              src={home2}
               alt="Trusted Drivers"
-              className="w-full h-auto rounded-lg shadow-md"
+              className="hidden md:block w-full max-h-svh rounded-lg shadow-md"
             />
           </div>
           <div>
@@ -79,25 +73,14 @@ const HomeContent = () => {
               clear, set prices if you're looking for cheap Luton taxi numbers
               or a reliable Luton taxi service. We can help you get to a hotel
               nearby or take a day trip to a tourist spot.
-            </p>
-            
-          </div>
-        </div>
-        <div className=" items-center">
-          <div>
-            <p className="text-lg text-gray-700">
-              Our taxi service in Luton is a safe and easy way to get to and
+              <br /><br />
+               Our taxi service in Luton is a safe and easy way to get to and
               from Luton and other places. It's easy to plan your trip with our
               simple online booking system. Taxi Airport Luton accepts all major
               credit cards, so making travel plans with us is easy and smooth.
             </p>
-          </div>
-        </div>
-
-        {/* Row 3: Text Left, Image Right */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">
+            <br />
+             <h2 className="text-3xl font-bold mb-4">
               Why Choose Taxi Airport Luton?
             </h2>
             <ul className="list-disc list-inside text-lg text-gray-700">
@@ -111,6 +94,13 @@ const HomeContent = () => {
                 accepted.
               </li>
             </ul>
+          </div>
+        </div>
+       
+        {/* Row 3: Text Left, Image Right */}
+        <div className="grid md:grid-cols-2 gap-0 md:gap-10 items-center">
+          <div>
+           
             <h2 className="text-3xl font-bold mb-4">Cabs Airport Luton</h2>
             <p className="text-lg text-gray-700">
               Cabs Luton Airport has lower rates since we are the ideal option
@@ -122,26 +112,8 @@ const HomeContent = () => {
               accounts for their daily trips or commutes. Prices for cabs to
               Luton Airport are low, but they are still affordable for everyone.
             </p>
-          </div>
-          <div>
-            <img
-              src={demo}
-              alt="Always On Time"
-              className="w-full h-auto rounded-lg shadow-md"
-            />
-          </div>
-        </div>
-        {/* Row 3: Text Left, Image Right */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-           <div>
-            <img
-              src={demo}
-              alt="Always On Time"
-              className="w-full h-auto rounded-lg shadow-md"
-            />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Minicab Luton Airport</h2>
+            <br />
+             <h2 className="text-3xl font-bold mb-4">Minicab Luton Airport</h2>
             <p>
               Minicab Luton Airport Prices has cheaper ways to get to and from
               the airport. Based on the size of the car, our fare calculator can
@@ -158,8 +130,15 @@ const HomeContent = () => {
               long trips from Luton.
             </p>
           </div>
-         
+          <div>
+            <img
+              src={home1}
+              alt="Always On Time"
+              className="hidden md:block w-full h-auto rounded-lg shadow-md"
+            />
+          </div>
         </div>
+   
         <div className="items-center">
           <div>
             <h2 className="text-3xl font-bold mb-4">Taxis Airport Luton</h2>

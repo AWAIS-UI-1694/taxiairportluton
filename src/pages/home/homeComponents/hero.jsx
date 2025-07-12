@@ -5,7 +5,7 @@ import React from "react";
 const Hero = () => {
     return (
         <>
-         <section className="bg-white text-black py-16 px-4">
+         <section className="bg-white h-svh text-black py-auto justify-center content-center px-4">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                   {/* Left: Text Content */}
                   <div>

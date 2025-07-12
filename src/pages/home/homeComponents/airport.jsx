@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
-import airportdemo from "../../../assets/images/airportdemo.webp";
-
+import heathrow from "../../../assets/images/heathrow.webp"
+import stansted from "../../../assets/images/stansted.webp"
+import gatwick from "../../../assets/images/gatwick.webp"
+import londonairport from "../../../assets/images/londonairport.webp"
 
 const Airport = () => {
      const airports = [
-        { name: "London", path: "/londonAirport", image: airportdemo },
-        { name: "Heathrow", path: "/heathrowAirport", image: "heathrow.webp" },
-        { name: "Gatwick", path: "/gatwickAirport", image: "gatwick.webp" },
-        { name: "Stansted", path: "/stanstedAirport", image: "stansted.webp" },
+        { name: "London", path: "/londonAirport", image: londonairport },
+        { name: "Heathrow", path: "/heathrowAirport", image: heathrow },
+        { name: "Gatwick", path: "/gatwickAirport", image: gatwick },
+        { name: "Stansted", path: "/stanstedAirport", image: stansted },
       ];
     return (
         <>
@@ -15,24 +17,24 @@ const Airport = () => {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-6">Airports We Cover</h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-gray-800">
+          <div className="grid grid-cols-2 md:grid-cols-2  text-gray-800">
             {airports.map((airport) => (
               <Link
                 to={airport.path}
                 key={airport.name}
-                className="relative h-40 rounded overflow-hidden shadow group"
+                className="relative h-96 overflow-hidden shadow group"
               >
                 {/* Background image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
-                  style={{ backgroundImage: `url(${airportdemo})` }}
+                  style={{ backgroundImage: `url(${airport.image})` }}
                 ></div>
 
                 {/* Dark overlay */}
                 <div className="absolute inset-0 bg-black opacity-50 group-hover:bg-opacity-30 transition duration-300"></div>
 
                 {/* Text */}
-                <div className="relative z-10 flex items-center justify-center h-full text-white font-semibold text-lg group-hover:text-black">
+                <div className="relative z-10 flex items-center justify-center h-full text-transparent font-bold text-4xl hover:text-white transition-all duration-300">
                   {airport.name} Airport
                 </div>
               </Link>

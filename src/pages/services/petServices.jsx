@@ -1,8 +1,8 @@
 import HeroDynamic from "../../components/herodynamic";
-import petHero from "../../assets/images/pethero.jpg";
+import petHero from "../../assets/images/pethero.webp";
 import { Helmet } from "react-helmet-async";
-import pet2 from "../../assets/images/pet2.jpg";
-import pet3 from "../../assets/images/pet3.jpg";
+import pet2 from "../../assets/images/pet2.webp";
+import pet3 from "../../assets/images/pet3.webp";
 
 const PetServices = () => {
   return (
