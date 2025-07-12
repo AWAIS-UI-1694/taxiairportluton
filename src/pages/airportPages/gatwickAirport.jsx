@@ -7,7 +7,7 @@ const GatwickAirport = () => {
   return (
     <>
      <Helmet>
-            <title>Taxi Airport Luton to Gatwick – Taxi from Luton Airport to Gatwick</title>
+            <title>Taxi Airport Luton to Gatwick—Luton Taxi to Gatwick Airport</title>
             <meta name="description" content="Taxi Airport Luton to Gatwick offers cheap, fixed-fare taxi services to and from Gatwick terminal, and to get quotes, book online on our website." />
             <link rel="canonical" href="https://taxiairportluton.com/gatwickAirport" />
           </Helmet>
