@@ -11,6 +11,8 @@ const LondonAirport = () => {
                 <title>Taxi Airport Luton to London – Taxi from Luton Airport to London</title>
                 <meta name="description" content="Taxi Airport Luton to London offers cheap, fixed-fare taxi services to and from London terminal, and to get quotes, book online on our website." />
                 <link rel="canonical" href="https://taxiairportluton.com/londonAirport" />
+                <meta name="keywords" content="Taxi airport luton to london, Luton airport transfer to london, Cab to luton airport from london, Taxi luton to london airport, Minicab from luton airport to London, Airport taxis luton to London, Luton to London taxi numbers, Book taxi to luton airport," />
+
               </Helmet>
       {/* hero dynamic start */}
       <HeroDynamic

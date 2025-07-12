@@ -359,7 +359,7 @@ const BookingForm = () => {
                   </option>
                 ))}
               </select>
-              <button className="ml-2 p-2 bg-yellow-500 rounded">
+              <button aria-label='btn3' className="ml-2 p-2 bg-yellow-500 rounded">
                 <FaUsers />
               </button>
             </div>

@@ -82,7 +82,7 @@ const LuggageModal = ({ isOpen, onClose, onSelect }) => {
       <div className="bg-white p-6 rounded-lg w-full max-w-md">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Select Luggage</h2>
-          <button onClick={onClose} className="text-red-500">
+          <button aria-label='btn5' onClick={onClose} className="text-red-500">
             <FaTimes className="w-6 h-6" />
           </button>
         </div>

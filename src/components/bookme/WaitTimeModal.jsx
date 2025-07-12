@@ -10,7 +10,7 @@ const WaitTimeModal = ({ isOpen, onClose, onSave }) => {
       <div className="bg-white p-6 rounded-lg w-full max-w-sm">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold">Waiting Time</h2>
-          <button onClick={onClose} className="text-red-500">
+          <button aria-label='btn7' onClick={onClose} className="text-red-500">
             <img src="/images/close.webp" alt="close" className="w-6 h-6" />
           </button>
         </div>

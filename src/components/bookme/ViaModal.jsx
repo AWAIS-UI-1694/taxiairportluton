@@ -113,7 +113,7 @@ const ViaModal = ({ isOpen, onClose, viaFields, setViaFields, validAddresses, se
           >
             Add Via
           </button>
-          <button onClick={onClose} className="text-red-500">
+          <button aria-label='btn6' onClick={onClose} className="text-red-500">
             <FaTimes className="w-6 h-6" />
           </button>
         </div>

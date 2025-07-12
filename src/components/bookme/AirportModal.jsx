@@ -22,7 +22,7 @@ const AirportModal = ({ isOpen, onClose, onSelect }) => {
       <div className="bg-white p-6 rounded-lg w-full max-w-md">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold">Airports</h2>
-          <button onClick={onClose} className="">
+          <button aria-label='btn2' onClick={onClose} className="">
             <FaTimes className="text-red-500 cursor-pointer" />
           </button>
         </div>

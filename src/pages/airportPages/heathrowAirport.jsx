@@ -11,6 +11,7 @@ const heatthrowAirport = () => {
                 <title>Taxi Airport Luton to Heathrow – Taxi from Luton Airport to Heathrow</title>
                 <meta name="description" content="Taxi Airport Luton to Heathrow offers cheap, fixed-fare taxi services to and from Heathrow terminal, and to get quotes, book online on our website." />
                 <link rel="canonical" href="https://taxiairportluton.com/heathrowAirport" />
+                <meta name="keywords" content="Taxi airport luton to heathrow, Luton airport transfer to heathrow, Cab to luton airport from heathrow, Taxi luton to heathrow airport, Minicab from luton airport to Heathrow, Airport taxis luton to Heathrow, Luton to Heathrow taxi numbers, Book taxi to luton airport," />
               </Helmet>
       {/* hero dynamic start */}
       <HeroDynamic

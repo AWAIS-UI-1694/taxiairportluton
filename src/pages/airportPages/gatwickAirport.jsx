@@ -10,6 +10,8 @@ const GatwickAirport = () => {
             <title>Taxi Airport Luton to Gatwick—Luton Taxi to Gatwick Airport</title>
             <meta name="description" content="Taxi Airport Luton to Gatwick offers cheap, fixed-fare taxi services to and from Gatwick terminal, and to get quotes, book online on our website." />
             <link rel="canonical" href="https://taxiairportluton.com/gatwickAirport" />
+             <meta name="keywords" content="Taxi airport luton to gatwick, Luton airport transfer to gatwick, Cab to luton airport from gatwick, Taxi luton to gatwick airport, Minicab from luton airport to Gatwick, Airport taxis luton to Gatwick, Luton to Gatwick taxi numbers, Book taxi to luton airport," />
+
           </Helmet>
       {/* hero dynamic start */}
       <HeroDynamic
